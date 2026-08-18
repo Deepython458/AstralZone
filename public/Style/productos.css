@@ -1,0 +1,78 @@
+.productos-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.marca-card{
+    background: var(--background-light);
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.marca-card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.marca-card--nombre{
+    font-size: 15px;
+}
+
+.marca-card--chevron{
+    font-size: 20px;
+    color: #8D8F99;
+    transition: transform .2s ease;
+}
+
+.marca-card.expandida .marca-card--chevron{
+    transform: rotate(180deg);
+}
+
+
+.marca-card--sabores{
+    display: none;
+    margin-top: 15px;
+}
+
+.marca-card.expandida .marca-card--sabores{
+    display: block;
+}
+
+.sabor-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.btn-agregar-sabor{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 15px;
+    background: transparent;
+    border: 1px dashed rgba(255,255,255,.15);
+    color: #8D8F99;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.marca-card--nueva{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px dashed rgba(255,255,255,.15);
+    color: #8D8F99;
+    background: transparent;
+    cursor: pointer;
+}

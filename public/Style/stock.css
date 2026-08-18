@@ -1,0 +1,171 @@
+.buscador{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--background-light);
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.buscador input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+}
+
+.buscador span{
+    color: #8D8F99;
+}
+
+.stock-layout{
+    display: flex;
+    gap: 20px;
+}
+
+.lista-stock{
+    background: var(--background-light);
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 10px;
+    padding: 20px;
+    width: 65%;
+}
+
+
+
+.lista-stock ul li{
+    list-style: none;
+}
+.lista-stock--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.lista-stock--header p{
+    font-size: 18px;
+}
+
+.toggle-ojo{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 52px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.toggle-input{
+    display: none;
+}
+
+.toggle-track{
+    position: absolute;
+    inset: 0;
+    background-color: rgb(45, 0, 54);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    box-sizing: border-box;
+}
+
+.toggle-track .material-symbols-rounded{
+    font-size: 14px;
+    color: #B65CFF;
+}
+
+.toggle-knob{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #B65CFF;
+    transition: left .2s ease;
+}
+
+.toggle-input:checked ~ .toggle-knob{
+    left: 27px;
+}
+
+.stock-item{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+}
+
+.producto-nombre{
+    font-size: 15px;
+}
+
+.stock-cantidad{
+    color: rgb(235, 235, 235);
+}
+
+
+
+.panel-stock-bajo{
+    background: var(--background-light);
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 10px;
+    padding: 20px;
+    width: 35%;
+}
+
+.panel-stock-bajo--titulo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.panel-stock-bajo ul li{
+    list-style: none;
+}
+
+.stock-bajo-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.stock-bajo-texto{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stock-bajo-nombre{
+    font-size: 14px;
+}
+
+.stock-bajo-detalle{
+    font-size: 12px;
+    color: #8D8F99;
+}
+
+.header-acciones{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-copiar{
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn-copiar .material-symbols-rounded{
+    font-size: 18px;
+}

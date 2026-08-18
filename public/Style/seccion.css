@@ -1,0 +1,278 @@
+:root{
+    --background-light:#111318;
+    --green: rgb(25, 185, 25);
+    --red: rgb(221, 87, 87);
+}
+
+
+.green{
+    color: rgb(25, 185, 25);
+}
+.red{
+    color: rgb(221, 87, 87);
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding: 0px 30px;
+
+    gap: 20px;
+}
+.gadgets{
+    
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.display{
+    position: relative;
+    display: flex;
+    height: 240px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #2A1748 0%,
+        #1D1732 45%,
+        #13151D 100%
+    );
+}
+
+.display::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+    padding: 1px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(182,92,255,.7) 0%,
+        rgba(168,85,247,.25) 25%,
+        rgba(255,255,255,.05) 55%,
+        rgba(255,255,255,.02) 75%,
+        rgba(0,0,0,.08) 100%
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+
+.display-info{
+    
+    padding: 20px;
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.display-img{
+    height: 100%;
+    width: 50%;
+}
+.saldo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 20px;
+}
+.cash{
+    color: rgb(235, 235, 235);
+    margin-top: 10px;
+}
+.cash-mount{
+    font-size: 50px;
+    color: white;
+}
+.count{
+    display: flex;
+    gap: 40px;
+}
+
+.accions{
+    display: flex;
+    background: var(--background-light);
+    border: 1px solid rgb(105, 105, 105);
+    gap: 10%;
+    padding: 30px;
+    border-radius: 10px;
+}
+.accions-box{
+    
+    width: 8%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.accions-box span{
+    padding: 7px;
+    border-radius: 100%;
+    background-color: rgb(45, 0, 54);
+    width: 40px;
+    height: 40px;
+    color: #B65CFF;
+    line-height: 1.5;
+}
+
+.products{
+    width: 100%;
+    height: 39vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-dashboard{
+    background: var(--background-light);
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 10px;
+    width: 48%;
+    
+}
+.products-list{
+    background: var(--background-light);
+    width: 48%;
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 10px;
+}
+.products-list p{
+    font-size: 20px;
+    padding: 6px;
+    
+}
+
+
+.products-list-ul li{
+    list-style: none;
+}
+
+.iteam{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    bor
+    
+}
+.iteam-info{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+.iteam-info span{
+    padding: 7px;
+    border-radius: 10px;
+    background-color: rgb(45, 0, 54);
+    color: #B65CFF;
+
+}
+.iteam-info p{
+    font-size: 15px;
+}
+.iteam-count p{
+    font-size: 16px;
+    color: rgb(235, 235, 235);
+}
+
+.indicador{
+   display: flex;
+   justify-content: center;
+}
+
+.analytics{
+    border-radius: 18px;
+    width: 100%;         
+    padding: 20px;         
+    box-sizing: border-box; 
+}
+
+
+.analytics-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.analytics h2{
+
+    color:white;
+
+    font-size:26px;
+
+
+}
+
+.analytics h1{
+
+    color:white;
+
+    font-size:35px;
+}
+
+.analytics p{
+
+    color:#33d66b;
+}
+.ventas{
+    margin-left: 20px;
+}
+#chart{
+
+    width:100%;
+
+    overflow:hidden;
+}
+
+.period{
+
+    width:120px;
+    height:38px;
+
+    padding:0 12px;
+
+    border-radius:10px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#181A20;
+
+    color:#E8E8E8;
+
+    font-size:14px;
+
+    outline:none;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.period:hover{
+
+    border-color:rgba(168,85,247,.45);
+
+}
+
+.period:focus{
+
+    border-color:#A855F7;
+
+}

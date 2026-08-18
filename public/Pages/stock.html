@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock - ASTRALZONE</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <link rel="stylesheet" href="../Style/variables.css">
+    <link rel="stylesheet" href="../Style/componentes.css">
+    <link rel="stylesheet" href="../Style/sidebar.css">
+    <link rel="stylesheet" href="../Style/seccion.css">
+    <link rel="stylesheet" href="../Style/stock.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+    <section>
+        <div class="gadgets">
+            <h2>Administrador Stock</h2>
+        </div>
+
+        <div class="buscador">
+            <span class="material-symbols-rounded">search</span>
+            <input type="text" placeholder="Buscar sabor o marca...">
+        </div>
+
+        <div class="stock-layout">
+
+                <div class="lista-stock">
+                    <div class="lista-stock--header">
+                        <p>Stock</p>
+                        <div class="header-acciones">
+                            <button class="icono-cuadrado btn-copiar" type="button">
+                                <span class="material-symbols-rounded">content_copy</span>
+                            </button>
+                            <label class="toggle-ojo">
+                                <input type="checkbox" class="toggle-input" id="toggle-cantidad">
+                                <span class="toggle-track">
+                                    <span class="material-symbols-rounded">visibility</span>
+                                    <span class="material-symbols-rounded">visibility_off</span>
+                                </span>
+                                <span class="toggle-knob"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="marca-grupo">
+                        <p class="marca-titulo">ELFBARICEKING 40K</p>
+                        <ul>
+                            <li><div class="stock-item"><p class="producto-nombre">🍉❄️ WatermelonIce <span class="stock-cantidad">: 12</span></p></div></li>
+                            <li><div class="stock-item"><p class="producto-nombre">🫐❄️ BlueRazzIce <span class="stock-cantidad">: 5</span></p></div></li>
+                            <li><div class="stock-item"><p class="producto-nombre">🍑❄️ PeachIce <span class="stock-cantidad">: 8</span></p></div></li>
+                            <li><div class="stock-item"><p class="producto-nombre">🍇❄️ GrapeIce <span class="stock-cantidad">: 3</span></p></div></li>
+                        </ul>
+                    </div>
+
+                    <div class="marca-grupo">
+                        <p class="marca-titulo">IGNITE V400 MIX</p>
+                        <ul>
+                            <li><div class="stock-item"><p class="producto-nombre">🍋🥤 LemonSoda <span class="stock-cantidad">: 15</span></p></div></li>
+                            <li><div class="stock-item"><p class="producto-nombre">🍓🍦 StrawCream <span class="stock-cantidad">: 7</span></p></div></li>
+                            <li><div class="stock-item"><p class="producto-nombre">🍍☀️ TropicalSun <span class="stock-cantidad">: 9</span></p></div></li>
+                        </ul>
+                    </div>
+
+                    <div class="marca-grupo">
+                        <p class="marca-titulo">ELFBARBCREATED 40K</p>
+                        <ul>
+                            <li><div class="stock-item"><p class="producto-nombre">🍒🍬 CherryCandy <span class="stock-cantidad">: 20</span></p></div></li>
+                            <li><div class="stock-item"><p class="producto-nombre">🥭❄️ MangoIce <span class="stock-cantidad">: 4</span></p></div></li>
+                            <li><div class="stock-item"><p class="producto-nombre">🍏🧊 AppleFrost <span class="stock-cantidad">: 11</span></p></div></li>
+                        </ul>
+                    </div>
+                </div>
+
+            <div class="panel-stock-bajo">
+                <p class="panel-stock-bajo--titulo">
+                    Stock bajo <span class="badge">1</span>
+                </p>
+                <ul>
+                    <li>
+                        <div class="stock-bajo-item">
+                            <span class="material-symbols-rounded icono-cuadrado amarillo">warning</span>
+                            <div class="stock-bajo-texto">
+                                <p class="stock-bajo-nombre">BlueRazzIce</p>
+                                <p class="stock-bajo-detalle">3 unidades restantes</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="../Scripts/layout.js"></script>
+    <script src="../Scripts/stock.js"></script>
+</body>
+</html>
