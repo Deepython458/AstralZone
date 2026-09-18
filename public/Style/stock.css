@@ -169,3 +169,24 @@
 .btn-copiar .material-symbols-rounded{
     font-size: 18px;
 }
+
+@media (max-width: 768px){
+
+    .stock-layout{
+        flex-direction: column;
+    }
+
+    .lista-stock,
+    .panel-stock-bajo{
+        width: 100%;
+    }
+
+    .lista-stock--header{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .buscador{
+        width: 100%;
+    }
+}

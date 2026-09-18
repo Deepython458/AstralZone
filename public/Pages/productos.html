@@ -19,84 +19,76 @@
             <h2>Productos</h2>
         </div>
 
-        <div class="productos-grid">
-
-    <div class="marca-card">
-        <div class="marca-card--header">
-            <p class="marca-card--nombre">IGNITE V400 MIX</p>
-            <span class="material-symbols-rounded marca-card--chevron">expand_more</span>
-        </div>
-    </div>
-
-    <div class="marca-card">
-        <div class="marca-card--header">
-            <p class="marca-card--nombre">ELFBARICEKING 40K</p>
-            <span class="material-symbols-rounded marca-card--chevron">expand_more</span>
-        </div>
-
-        <div class="marca-card--sabores">
-            <ul>
-                <li>
-                    <div class="sabor-item">
-                        <p>🍉❄️ WatermelonIce</p>
-                        <div class="cantidad-selector">
-                            <button class="btn-cantidad">-</button>
-                            <span class="cantidad-valor">12</span>
-                            <button class="btn-cantidad">+</button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sabor-item">
-                        <p>🫐❄️ BlueRazzIce</p>
-                        <div class="cantidad-selector">
-                            <button class="btn-cantidad">-</button>
-                            <span class="cantidad-valor">5</span>
-                            <button class="btn-cantidad">+</button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sabor-item">
-                        <p>🍑❄️ PeachIce</p>
-                        <div class="cantidad-selector">
-                            <button class="btn-cantidad">-</button>
-                            <span class="cantidad-valor">8</span>
-                            <button class="btn-cantidad">+</button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sabor-item">
-                        <p>🍇❄️ GrapeIce</p>
-                        <div class="cantidad-selector">
-                            <button class="btn-cantidad">-</button>
-                            <span class="cantidad-valor">3</span>
-                            <button class="btn-cantidad">+</button>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="btn-agregar-sabor" type="button">
-                <span class="material-symbols-rounded">add</span> Agregar sabor
+        <div class="productos-grid" id="productos-grid">
+            <button class="marca-card marca-card--nueva" type="button" id="btn-nueva-marca">
+                <span class="material-symbols-rounded">add</span>
+                <p>Nueva marca</p>
             </button>
         </div>
-    </div>
 
-    <div class="marca-card">
-        <div class="marca-card--header">
-            <p class="marca-card--nombre">ELFBARBCREATED 40K</p>
-            <span class="material-symbols-rounded marca-card--chevron">expand_more</span>
+        <div class="modal-overlay" id="modal-marca">
+            <div class="modal-panel">
+                <div class="modal-panel--header">
+                    <p>Nueva marca</p>
+                    <span class="material-symbols-rounded modal-cerrar">close</span>
+                </div>
+
+                <form id="form-marca" class="modal-form">
+                    <label>Nombre</label>
+                    <input type="text" id="input-marca-nombre" required>
+
+                    <label>Categoría</label>
+                    <select id="input-marca-categoria" required></select>
+
+                    <button type="submit" class="btn-agregar-sabor">Guardar</button>
+                </form>
+
+                <button type="button" id="btn-nueva-categoria" class="btn-agregar-sabor" style="margin-top: 10px; background: transparent; border-style: dashed;">
+                    + Nueva categoría
+                </button>
+            </div>
         </div>
-    </div>
 
-    <div class="marca-card marca-card--nueva">
-        <span class="material-symbols-rounded">add</span>
-        <p>Nueva marca</p>
-    </div>
+        <div class="modal-overlay" id="modal-categoria">
+            <div class="modal-panel">
+                <div class="modal-panel--header">
+                    <p>Nueva categoría</p>
+                    <span class="material-symbols-rounded modal-cerrar">close</span>
+                </div>
 
-</div>
+                <form id="form-categoria" class="modal-form">
+                    <label>Nombre</label>
+                    <input type="text" id="input-categoria-nombre" required>
+
+                    <button type="submit" class="btn-agregar-sabor">Guardar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-sabor">
+            <div class="modal-panel">
+                <div class="modal-panel--header">
+                    <p>Nuevo sabor</p>
+                    <span class="material-symbols-rounded modal-cerrar">close</span>
+                </div>
+
+                <form id="form-sabor" class="modal-form">
+                    <label>Nombre</label>
+                    <input type="text" id="input-sabor-nombre" required>
+
+                    <label>Cantidad</label>
+                    <input type="number" id="input-sabor-cantidad" min="0" required>
+
+                    <label>Emoji 1</label>
+                    <input type="text" id="input-sabor-emoji1" maxlength="2">
+
+                    <label>Emoji 2</label>
+                    <input type="text" id="input-sabor-emoji2" maxlength="2">
+
+                    <button type="submit" class="btn-agregar-sabor">Guardar</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <script src="../Scripts/layout.js"></script>

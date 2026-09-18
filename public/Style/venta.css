@@ -200,3 +200,24 @@
     background-color: rgba(221, 87, 87, 0.15);
     color: var(--red);
 }
+
+@media (max-width: 768px){
+
+    .venta-layout{
+        flex-direction: column;
+    }
+
+    .lista-productos{
+        width: 100%;
+        order: 2;
+    }
+
+    .carrito{
+        width: 100%;
+        order: 1;
+    }
+
+    .carrito-lista{
+        max-height: 200px;
+    }
+}

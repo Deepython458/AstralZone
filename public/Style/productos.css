@@ -37,6 +37,10 @@
 .marca-card--sabores{
     display: none;
     margin-top: 15px;
+
+}
+ul{
+        list-style-type: none;
 }
 
 .marca-card.expandida .marca-card--sabores{
@@ -75,4 +79,11 @@
     color: #8D8F99;
     background: transparent;
     cursor: pointer;
+}
+
+@media (max-width: 768px){
+
+    .productos-grid{
+        grid-template-columns: 1fr;
+    }
 }

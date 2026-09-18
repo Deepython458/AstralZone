@@ -1,114 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Style/variables.css">
+    <title>ASTRALZONE</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
-    <link rel="stylesheet" href="Style/sidebar.css">
-    <link rel="stylesheet" href="Style/seccion.css">
-    <link rel="stylesheet" href="Style/card.css">
-    <link rel="stylesheet" href="Style/panel.css">
-    <link rel="stylesheet" href="Style/componentes.css">
+    <link rel="stylesheet" href="/Style/variables.css">
+    <link rel="stylesheet" href="/Style/componentes.css">
+    <link rel="stylesheet" href="/Style/sidebar.css">
+    <link rel="stylesheet" href="/Style/seccion.css">
+    <link rel="stylesheet" href="/Style/card.css">
+    <link rel="stylesheet" href="/Style/panel.css">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
     <div id="sidebar-container"></div>
+
     <section>
         <div class="gadgets">
-            <h2>Bienvendio, Admin!</h2>
+            <h2>Bienvenido, Admin!</h2>
         </div>
         <div class="display">
             <div class="display-info">
                 <div class="balance">
                     <div class="saldo">
                         <p>Saldo Disponible</p>
-                        <img src="../Material/visibility_on.png" alt="">
+                        <img src="/Material/visibility_on.png" alt="" id="toggle-visibilidad">
                     </div>
                     <div class="cash">
-                        <p class="cash-mount">$ 1.234.567,00</p>
+                        <p class="cash-mount" id="cash-mount">$ 0</p>
                         <p>Dinero en la cuenta</p>
                     </div>
                 </div>
                 <div class="count">
-                        <div class="cout-inversion">
-                            <p>Inversion del mes</p>
-                            <p class="red">$ 2.560.000,00</p>
-                        </div>
-                        <div class="cout-gain">
-                            <p>Ganancias del mes</p>
-                            <p class="green">$ 368.000,00</p>
-                        </div>
+                    <div class="cout-inversion">
+                        <p>Inversion del mes</p>
+                        <p class="red" id="monto-inversion">$ 0</p>
                     </div>
+                    <div class="cout-gain">
+                        <p>Ganancias del mes</p>
+                        <p class="green" id="monto-ganancia">$ 0</p>
+                    </div>
+                </div>
             </div>
             <div class="display-img">
                 <div class="card-container">
-  <div class="card-box">
-    <div class="card-head">
-      <div class="card-chip">
-        <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M5.813 2C2.647 2 0 4.648 0 7.813v10.375C0 21.352 2.648 24 5.813 24h14.375C23.352 24 26 21.352 26 18.187V7.813C26 4.649 23.352 2 20.187 2H5.813zm0 2h14.375C22.223 4 24 5.777 24 7.813V9h-6c-.555 0-1-.445-1-1c0-.555.445-1 1-1a1 1 0 1 0 0-2c-1.645 0-3 1.355-3 3c0 1.292.844 2.394 2 2.813v4.968c-1.198.814-2 2.18-2 3.719c0 .923.293 1.781.781 2.5H10.22a4.439 4.439 0 0 0 .78-2.5c0-1.538-.802-2.905-2-3.719v-4.969c1.156-.418 2-1.52 2-2.812c0-1.645-1.355-3-3-3H6a1 1 0 0 0-.094 0a1.001 1.001 0 0 0-.093 0A1.004 1.004 0 0 0 6 7h2c.555 0 1 .445 1 1c0 .555-.445 1-1 1H2V7.812C2 5.777 3.777 4 5.813 4zM2 11h5v4H2v-4zm17 0h5v4h-5v-4zM2 17h4.5C7.839 17 9 18.161 9 19.5S7.839 22 6.5 22h-.688C3.777 22 2 20.223 2 18.187V17zm17.5 0H24v1.188C24 20.223 22.223 22 20.187 22H19.5c-1.339 0-2.5-1.161-2.5-2.5s1.161-2.5 2.5-2.5z"
-            fill="currentcolor"
-          ></path>
-        </svg>
-      </div>
-      <div class="card-logo">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g fill-rule="evenodd" fill="none">
-            <circle r="7" fill="#ea001b" cy="12" cx="7"></circle>
-            <circle
-              r="7"
-              fill-opacity=".8"
-              fill="#ffa200"
-              cy="12"
-              cx="17"
-            ></circle>
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div class="card-number-row">
-      <span>6037 1234 4567 8910</span>
-    </div>
-    <div class="card-details">
-      <div class="card-holder-col">
-        <span class="card-holder-title">CARD HOLDER</span>
-        <span class="card-holder-name">ASTRALZONE</span>
-      </div>
-      <div class="card-date-col">
-        <span class="card-date-title">VALID THRU</span>
-        <span class="card-date-sub">06/26</span>
-      </div>
-    </div>
-  </div>
-</div>
+                    <div class="card-box">
+                        <div class="card-head">
+                            <div class="card-chip">
+                                <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.813 2C2.647 2 0 4.648 0 7.813v10.375C0 21.352 2.648 24 5.813 24h14.375C23.352 24 26 21.352 26 18.187V7.813C26 4.649 23.352 2 20.187 2H5.813zm0 2h14.375C22.223 4 24 5.777 24 7.813V9h-6c-.555 0-1-.445-1-1c0-.555.445-1 1-1a1 1 0 1 0 0-2c-1.645 0-3 1.355-3 3c0 1.292.844 2.394 2 2.813v4.968c-1.198.814-2 2.18-2 3.719c0 .923.293 1.781.781 2.5H10.22a4.439 4.439 0 0 0 .78-2.5c0-1.538-.802-2.905-2-3.719v-4.969c1.156-.418 2-1.52 2-2.812c0-1.645-1.355-3-3-3H6a1 1 0 0 0-.094 0a1.001 1.001 0 0 0-.093 0A1.004 1.004 0 0 0 6 7h2c.555 0 1 .445 1 1c0 .555-.445 1-1 1H2V7.812C2 5.777 3.777 4 5.813 4zM2 11h5v4H2v-4zm17 0h5v4h-5v-4zM2 17h4.5C7.839 17 9 18.161 9 19.5S7.839 22 6.5 22h-.688C3.777 22 2 20.223 2 18.187V17zm17.5 0H24v1.188C24 20.223 22.223 22 20.187 22H19.5c-1.339 0-2.5-1.161-2.5-2.5s1.161-2.5 2.5-2.5z"
+                                        fill="currentcolor"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="card-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g fill-rule="evenodd" fill="none">
+                                        <circle r="7" fill="#ea001b" cy="12" cx="7"></circle>
+                                        <circle r="7" fill-opacity=".8" fill="#ffa200" cy="12" cx="17"></circle>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-number-row">
+                            <span>6037 1234 4567 8910</span>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-holder-col">
+                                <span class="card-holder-title">CARD HOLDER</span>
+                                <span class="card-holder-name">ASTRALZONE</span>
+                            </div>
+                            <div class="card-date-col">
+                                <span class="card-date-title">VALID THRU</span>
+                                <span class="card-date-sub">06/26</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="accions">
-            <div class="accions-box">
-                <span class="material-symbols-rounded">currency_exchange</span>   
+            <a href="/pages/vender.html" class="accions-box">
+                <span class="material-symbols-rounded">currency_exchange</span>
                 <p>Cobrar venta</p>
-            </div>
-            <div class="accions-box">
-                <span class="material-symbols-rounded">deployed_code</span>   
+            </a>
+            <a href="/pages/productos.html" class="accions-box">
+                <span class="material-symbols-rounded">deployed_code</span>
                 <p>Nuevo producto</p>
-            </div>
-            <div class="accions-box">
-                <span class="material-symbols-rounded">cached</span>    
+            </a>
+            <div class="accions-box" id="btn-reiniciar-tanda">
+                <span class="material-symbols-rounded">cached</span>
                 <p>Reiniciar Tanda</p>
             </div>
-            <div class="accions-box">
-                <span class="material-symbols-rounded">account_balance</span>    
-                <p>Inversion</p>
-            </div>
-            <div class="accions-box">
-                <span class="material-symbols-rounded">account_balance</span>    
-                <p>Inversion</p>
-            </div>
-            <div class="accions-box">
-                <span class="material-symbols-rounded">account_balance</span>    
+            <div class="accions-box" id="btn-editar-inversion">
+                <span class="material-symbols-rounded">account_balance</span>
                 <p>Inversion</p>
             </div>
         </div>
@@ -121,7 +108,6 @@
                             <h1>$ 2.560.000,00</h1>
                             <p class="green">↑ 12.5% vs mes anterior</p>
                         </div>
-
                         <select class="period">
                             <option>Este mes</option>
                             <option>Últimos 30 días</option>
@@ -134,159 +120,79 @@
             <div class="products-list">
                 <p class="indicador">Ultima venta!</p>
                 <div class="products-list-ul">
-                    <ul>
-                        <li>
-                            <div class="iteam">
-                                <div class="iteam-info">
-                                    <p>x1</p>
-                                    <span class="material-symbols-rounded">deployed_code</span>
-                                    <p>WatermelonIce</p>
-                                </div>
-                                <div class="iteam-count">
-                                    <p>$25.500</p>
-
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="iteam">
-                                <div class="iteam-info">
-                                    <p>x2</p>
-                                    <span class="material-symbols-rounded">deployed_code</span>
-                                    <p>BlueRazzIce</p>
-                                </div>
-                                <div class="iteam-count">
-                                    <p>$25.500</p>
-
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="iteam">
-                                <div class="iteam-info">
-                                    <p>x6</p>
-                                    <span class="material-symbols-rounded">deployed_code</span>
-                                    <p>DragonStrawnana</p>
-                                </div>
-                                <div class="iteam-count">
-                                    <p>$25.500</p>
-
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="iteam">
-                                <div class="iteam-info">
-                                    <p>x5</p>
-                                    <span class="material-symbols-rounded">deployed_code</span>
-                                    <p>SourSlushGummy</p>
-                                </div>
-                                <div class="iteam-count">
-                                    <p>$25.500</p>
-
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="iteam">
-                                <div class="iteam-info">
-                                    <p>x6</p>
-                                    <span class="material-symbols-rounded">deployed_code</span>
-                                    <p>DragonStrawnana</p>
-                                </div>
-                                <div class="iteam-count">
-                                    <p>$25.500</p>
-
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <ul id="ultimas-ventas-lista"></ul>
                 </div>
-
             </div>
         </div>
     </section>
+
     <div class="panel">
         <div class="panel-dolar">
-            <p class="panel-dolar--titulo">DolarHoy</p>
+            <p class="panel-dolar--titulo">DOLARHOY</p>
             <div class="panel-dolar--fila">
-                <div class="panel-dolar--col">
+                <div class="panel-dolar--col" data-tipo="usdt">
                     <p>USDT</p>
-                    <div class="panel-dolar--valor">
-                        <span>$1.589</span>
-                        <span class="material-symbols-rounded red">arrow_upward</span>
-                    </div>
+                    <div class="panel-dolar--valor"></div>
                 </div>
-                <div class="panel-dolar--col">
+                <div class="panel-dolar--col" data-tipo="blue">
                     <p>BLUE</p>
-                    <div class="panel-dolar--valor">
-                        <span>$1.530</span>
-                        <span class="material-symbols-rounded green">arrow_downward</span>
-                    </div>
+                    <div class="panel-dolar--valor"></div>
                 </div>
-                
             </div>
         </div>
+
         <div class="panel-categorias">
-            <p class="panel-categorias--titulo">Resumen Rapido</p>
-            <ul>
-                <li>
-                    <div class="categoria">
-                        <div class="categoria-info">
-                            <span class="material-symbols-rounded">battery_change</span>
-                            <p>Vapes</p>
-                        </div>
-                        <p class="categoria-monto">$450.000</p>    
-                    </div>
-                </li>
-                <li>
-                    <div class="categoria">
-                        <div class="categoria-info">
-                            <span class="material-symbols-rounded">grass</span>
-                            <p>Thc</p>
-                        </div>
-                        <p class="categoria-monto">$210.000</p>
-                    </div>
-                </li>
-            </ul>
+            <p class="panel-categorias--titulo">Resumen rápido</p>
+            <ul></ul>
         </div>
+
         <div class="panel-alertas">
             <p class="panel-alertas--titulo">
-                Alertas <span class="badge">3</span>
+                Alertas <span class="badge">0</span>
             </p>
-            <ul>
-                <li>
-                    <div class="alerta">
-                        <span class="material-symbols-rounded icono-cuadrado rojo">warning</span>
-                        <div class="alerta-texto">
-                            <p class="alerta-principal">7 productos con stock bajo</p>
-                            <p class="alerta-secundario">Revisa tu inventario</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="alerta">
-                        <span class="material-symbols-rounded icono-cuadrado amarillo">warning</span>
-                        <div class="alerta-texto">
-                            <p class="alerta-principal">Estas Cerca de la Inversion</p>
-                            <p class="alerta-secundario">Contactar con Proveedores</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="alerta">
-                        <span class="material-symbols-rounded icono-cuadrado amarillo">warning</span>
-                        <div class="alerta-texto">
-                            <p class="alerta-principal">Estas Cerca de la Inversion</p>
-                            <p class="alerta-secundario">Contactar con Proveedores</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <ul></ul>
         </div>
     </div>
 
-<script src="../Scripts/animacion.js"></script>
-<script src="Scripts/layout.js"></script>
+    <div class="modal-overlay" id="modal-tanda">
+        <div class="modal-panel">
+            <div class="modal-panel--header">
+                <p>Reiniciar Tanda</p>
+                <span class="material-symbols-rounded modal-cerrar">close</span>
+            </div>
+            <form id="form-tanda" class="modal-form">
+                <label>Monto invertido</label>
+                <input type="number" id="input-monto-inversion" min="0" required>
+                <button type="submit" class="btn-agregar-sabor">Confirmar</button>
+            </form>
+        </div>
+    </div>
+        <div class="modal-overlay" id="modal-alertas">
+            <div class="modal-panel">
+                <div class="modal-panel--header">
+                    <p>Alertas</p>
+                    <span class="material-symbols-rounded modal-cerrar">close</span>
+                </div>
+                <ul class="modal-alertas-contenido"></ul>
+            </div>
+        </div>
+
+    <div class="modal-overlay" id="modal-inversion">
+        <div class="modal-panel">
+            <div class="modal-panel--header">
+                <p>Editar inversión</p>
+                <span class="material-symbols-rounded modal-cerrar">close</span>
+            </div>
+            <form id="form-inversion" class="modal-form">
+                <label>Nuevo monto invertido</label>
+                <input type="number" id="input-editar-inversion" min="0" required>
+                <button type="submit" class="btn-agregar-sabor">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/Scripts/layout.js"></script>
+    <script src="/Scripts/animacion.js"></script>
+    <script src="/Scripts/index.js"></script>
 </body>
 </html>

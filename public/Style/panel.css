@@ -116,6 +116,10 @@
     list-style: none;
 }
 
+.panel-alertas ul{
+    max-height: 260px;
+    overflow: hidden;
+}
 .alerta{
     display: flex;
     align-items: center;
@@ -137,4 +141,58 @@
 .alerta-secundario{
     font-size: 13px;
     color: #8D8F99;
+}
+.panel-dolar--valor.subio,
+.panel-dolar--valor.subio *{
+    color: var(--red);
+}
+
+.panel-dolar--valor.bajo,
+.panel-dolar--valor.bajo *{
+    color: var(--green);
+}
+
+
+@media (max-width: 768px){
+    .panel{
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .panel{
+        order: 4;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .panel-alertas{
+        display: none;
+    }
+}
+
+.btn-alertas-mobile{
+    position: relative;
+    background: transparent;
+    border: none;
+    color: white;
+    display: flex;
+    cursor: pointer;
+}
+
+.badge-alertas{
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    background: var(--red);
+    color: white;
+    font-size: 10px;
+    padding: 1px 5px;
+    border-radius: 100px;
+}
+
+.modal-alertas-contenido li{
+    list-style: none;
 }
